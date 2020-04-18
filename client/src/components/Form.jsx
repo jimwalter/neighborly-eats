@@ -3,12 +3,15 @@ import Droplist from './Droplist.jsx';
 
 const Form = (props) => {
   return (
-    <div className="form">
-      <form>
-        <label htmlFor="zip"><h2>Enter Your Zip Code:</h2></label>
-        <input type="number" id="zip" required />
+    <div className="grid form">
+      <form className="col-1-3">
+        <fieldset className="register-group">
+          <label>Enter Your Zip Code:
+            <input type="number" name="zip" placeholder="Zip Code" required />
+          </label>
+          <Droplist categories={props.categories}/>
+        </fieldset>
       </form>
-      <Droplist categories={props.categories}/>
     </div>
   )
 }
