@@ -3,12 +3,14 @@ import Restaurant from './Restaurant.jsx';
 
 const Recommendations = () => {
   return (
-    <div className="grid">
+    <section className="row">
       <h2>
         Recommendations
       </h2>
-    <Restaurant/>
-    </div>
+      <div className="grid">
+        <Restaurant/><Restaurant/><Restaurant/>
+      </div>
+    </section>
   )
 }
 

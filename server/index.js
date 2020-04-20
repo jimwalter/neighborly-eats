@@ -10,6 +10,9 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, '../client/dist')))
 app.use(morgan('dev'));
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/getRecommendations', (req, res) => {
+  console.log(req.body);
+  res.status(200).send('Hello World!')
+});
 
 app.listen(port, () => console.log(`App listening at http://localhost:${port}`));

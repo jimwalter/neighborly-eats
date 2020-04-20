@@ -7,9 +7,14 @@ const Form = (props) => {
       <form className="col-1-3">
         <fieldset className="register-group">
           <label>Enter Your Zip Code:
-            <input type="number" name="zip" placeholder="Zip Code" required />
+            <input type="number"
+              pattern="[0-9]{5}"
+              name="zip"
+              placeholder="Zip Code"
+              required
+              onChange={props.zipChange}/>
           </label>
-          <Droplist categories={props.categories}/>
+          <Droplist catSelect={props.catSelect} categories={props.categories}/>
         </fieldset>
       </form>
     </div>
