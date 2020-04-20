@@ -12,8 +12,10 @@ app.use(morgan('dev'));
 
 
 app.get('/api/getRecommendations', (req, res) => {
-  // console.log(yelp);
-  yelp()
+  console.log(req.query.category);
+  let cat = req.query.category.toLowerCase().replace(/['"]+/g, '');
+  console.log(cat);
+  yelp(req.query.zip, cat)
     .then(response => {
       var respo = response.jsonBody.businesses;
       // console.log(respo);

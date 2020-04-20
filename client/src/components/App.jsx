@@ -27,22 +27,34 @@ class App extends React.Component {
   componentDidMount() {
   }
 
-  getRecommendations(category) {
-    axios.get('/api/getRecommendations')
+  getRecommendations() {
+    var options = {
+      params: {
+        zip: this.state.zip,
+        category: this.state.category
+      }
+    }
+    axios.get('/api/getRecommendations', options)
       .then( result => console.log(result.data))
       .catch( err => console.log(err));
   }
 
   handleZipChange(event) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
+    this.setState({
+      zip: event.target.value
+    }, () => console.log(this.state.zip))
   }
 
   handleCategorySelect(event) {
     console.log(event.target.value);
+    this.setState({
+      category: event.target.value
+    })
   }
 
   handleRecommendationSubmit(event) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.getRecommendations();
     event.preventDefault();
   }
