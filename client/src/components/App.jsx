@@ -28,8 +28,7 @@ class App extends React.Component {
   }
 
   getRecommendations(category) {
-    //query yelp for recs
-    axios.get('/getRecommendations')
+    axios.get('/api/getRecommendations')
       .then( result => console.log(result.data))
       .catch( err => console.log(err));
   }
