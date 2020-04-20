@@ -12,16 +12,16 @@ app.use(morgan('dev'));
 
 
 app.get('/api/getRecommendations', (req, res) => {
-  yelp.search()
-  .then(response => {
-    console.log(response.jsonBody.businesses[0].name);
-    res.status(200).send(response.jsonBody.businesses[0].name)
-  }).catch(e => {
-    // console.log(e);
-    res.status(400).send(e);
-  });
-  // console.log(req.body);
-  // res.status(200).send('Hello World!')
+  // console.log(yelp);
+  yelp()
+    .then(response => {
+      var respo = response.jsonBody.businesses;
+      // console.log(respo);
+      res.status(200).send(respo)
+    })
+    .catch(e => {
+      res.status(400).send(e);
+    });
 });
 
 app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
