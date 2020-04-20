@@ -35,7 +35,12 @@ class App extends React.Component {
       }
     }
     axios.get('/api/getRecommendations', options)
-      .then( result => console.log(result.data))
+      .then( result => {
+        // console.log(result.data)
+        this.setState({
+          recommendations: result.data
+        })
+      })
       .catch( err => console.log(err));
   }
 
@@ -43,11 +48,11 @@ class App extends React.Component {
     // console.log(event.target.value);
     this.setState({
       zip: event.target.value
-    }, () => console.log(this.state.zip))
+    });
   }
 
   handleCategorySelect(event) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.setState({
       category: event.target.value
     })
@@ -60,7 +65,7 @@ class App extends React.Component {
   }
 
   handleRandomSubmit(event) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     // get a random restaurant from db
     event.preventDefault();
   }
@@ -83,7 +88,7 @@ class App extends React.Component {
         <SectionBreak title={'Our Recommendations'} />
         <section className="row">
           <div className="grid">
-            <Recommendations/>
+            <Recommendations recs={this.state.recommendations}/>
           </div>
         </section>
         <SectionBreak title={'Girlfriend Can\'t Decide?'} />

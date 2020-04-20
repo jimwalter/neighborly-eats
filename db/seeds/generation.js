@@ -9,7 +9,7 @@ var search = (zip, category) => (client.search({
   categories: category,
   sort_by: 'rating',
   location: zip,
-  limit: 4,
+  limit: 3,
   })
 );
 

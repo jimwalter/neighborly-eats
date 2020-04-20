@@ -1,7 +1,8 @@
 import React from 'react';
 import Restaurant from './Restaurant.jsx';
 
-const Recommendations = () => {
+const Recommendations = (props) => {
+  console.log(props.recs.map(rec => console.log(rec)));
   return (
     <section>
       <h2>
@@ -9,7 +10,9 @@ const Recommendations = () => {
       </h2>
       <br/>
       <div className="grid">
-        <Restaurant/><Restaurant/><Restaurant/>
+        {props.recs.map((rec) =>
+           <Restaurant key={rec.id} info={rec} />
+        )}
       </div>
     </section>
   )
