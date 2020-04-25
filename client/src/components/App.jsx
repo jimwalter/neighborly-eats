@@ -87,11 +87,8 @@ class App extends React.Component {
         </section>
         <SectionBreak title={'Our Recommendations'} />
         <section className="row">
-          <div className="grid">
-            <Recommendations recs={this.state.recommendations}/>
-          </div>
+          <Recommendations recs={this.state.recommendations}/>
         </section>
-        <br /><br/>
         <SectionBreak title={'Girlfriend Can\'t Decide?'} />
         <section className="row">
           <h2 className="grid">Pick Random Restaurant:</h2>

@@ -7,8 +7,8 @@ const port = 3000;
 
 const yelp = require('../db/seeds/generation.js');
 
-app.use(express.static(path.join(__dirname, '../client/dist')))
 app.use(morgan('dev'));
+app.use(express.static(path.join(__dirname, '../client/dist')))
 
 
 app.get('/api/getRecommendations', (req, res) => {
