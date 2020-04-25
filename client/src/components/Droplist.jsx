@@ -6,7 +6,7 @@ const Droplist = (props) => {
       <label>
         What Are You In The Mood For:
         <select onChange={props.catSelect} name="category">
-          <option value="">--Please choose an option--</option>
+          <option value="">--Please Choose An Option--</option>
           {props.categories.map( category => (
             <option key={category.num} value={`"${category.name}"`}>{category.name}</option>
           ))}
