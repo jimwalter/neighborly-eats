@@ -97,6 +97,11 @@ class App extends React.Component {
             <Button click={this.handleRandomSubmit} btnTitle={'Decide For Me!'} />
           </div>
         </section>
+        <section className="footer">
+          <a href="https://github.com/jimwalter/ghrden08-mvp">
+            <h1>Project Repository</h1>
+          </a>
+        </section>
       </div>
     )
   }

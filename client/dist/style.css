@@ -582,3 +582,13 @@ table h4 {
 select {
   width: 100%;
 }
+
+.rightside {
+  text-align: center;
+  padding: 40px 0px 0px 120px;
+}
+
+.footer {
+  text-align: center;
+  margin: 50px 60.5px;
+}
