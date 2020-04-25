@@ -11,16 +11,22 @@ const Restaurant = (props) => {
       <p className="p-padding">Rating: {props.info.rating || 'N/A'}</p>
       <br/>
       <form>
-        <a href={`"${props.URL}"`} target="_blank">
+      <a href="#" onClick={(e) =>{
+        e.preventDefault();
+        window.open(`https://www.yelp.com/menu/${props.info.alias}`)
+       }} >
           <input className="btn btn-default" type="submit" name="submit" value="Menu"/>
         </a>
         <br/><br/>
-        <a href="https://www.doordash.com/en-US" target="_blank">
-          <input className="btn btn-default" type="submit" name="submit" value="DoorDash"/>
+        <a href="#" onClick={(e) =>{
+        e.preventDefault();
+        window.open("https://www.doordash.com/en-US")
+       }} >
+          <input className="btn btn-default" type="submit" name="submit" value="DoorDash"></input>
         </a>
       </form>
     </section>
   )
 }
-
+// href={}
 export default Restaurant;

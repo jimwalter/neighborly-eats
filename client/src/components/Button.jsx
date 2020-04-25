@@ -3,7 +3,7 @@ import React from 'react';
 const Button = (props) => {
   return (
   <form>
-    <input className="btn btn-default" type="submit" name="submit" value={props.btnTitle} onClick={props.click}/>
+    <input className="btn btn-alt" type="submit" name="submit" value={props.btnTitle} onClick={props.click}/>
   </form>
   )
 }

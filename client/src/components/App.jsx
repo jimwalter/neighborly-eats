@@ -32,7 +32,7 @@ class App extends React.Component {
     var options = {
       params: {
         zip: this.state.zip || 80211,
-        category: this.state.category || 'vietnamese'
+        category: this.state.category || 'chinese'
       }
     }
     axios.get('/api/getRecommendations', options)
@@ -54,7 +54,7 @@ class App extends React.Component {
       .then( result => {
         this.setState({
           randomRec: result.data
-        }, () => console.log(this.state.recommendations))
+        }, () => console.log(this.state.randomRec))
       })
       .catch( err => console.log(err));
   }
@@ -90,7 +90,7 @@ class App extends React.Component {
       <div>
         <div className="hero">
           <h2>NEIGHBORLY EATS</h2>
-          <h3>Support Local Restaurants In Your Neightborhood</h3>
+          <h3>Support Restaurants In Your Neighborhood</h3>
         </div>
         <SectionBreak title={'Enter Your Information'} />
         <section className="row">
@@ -104,14 +104,14 @@ class App extends React.Component {
         <section className="row">
           <Recommendations recs={this.state.recommendations}/>
         </section>
-        <SectionBreak title={'Girlfriend Can\'t Decide?'} />
-        <section className="row">
+        <SectionBreak title={'Not Sure? Enter Zip Above & Press Button'} />
+        <section className="row-alt-2">
           <h2 className="grid">Pick Random Restaurant:</h2>
           <br />
           <div className="grid">
             <Button click={this.handleRandomSubmit} btnTitle={'Decide For Me!'} />
           </div>
-          <Recommendations secTitle={'Recommendation'} recs={this.state.randomRec}/>
+          <Recommendations secTitle={'Recommendation'} recs={this.state.randomRec} class={'center-rec'}/>
         </section>
         <section className="footer">
           <a href="https://github.com/jimwalter/ghrden08-mvp">
