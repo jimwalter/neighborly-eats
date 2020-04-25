@@ -19,6 +19,7 @@ class App extends React.Component {
     }
     this.handleRecommendationSubmit = this.handleRecommendationSubmit.bind(this);
     this.getRecommendations = this.getRecommendations.bind(this);
+    this.getRecommendations = this.getRecommendations.bind(this);
     this.handleRandomSubmit= this.handleRandomSubmit.bind(this);
     this.handleCategorySelect= this.handleCategorySelect.bind(this);
     this.handleZipChange= this.handleZipChange.bind(this);
@@ -30,16 +31,30 @@ class App extends React.Component {
   getRecommendations() {
     var options = {
       params: {
-        zip: this.state.zip,
-        category: this.state.category
+        zip: this.state.zip || 80211,
+        category: this.state.category || 'vietnamese'
       }
     }
     axios.get('/api/getRecommendations', options)
       .then( result => {
-        // console.log(result.data)
         this.setState({
           recommendations: result.data
-        })
+        }, () => console.log(this.state.recommendations))
+      })
+      .catch( err => console.log(err));
+  }
+
+  getRandom() {
+    var options = {
+      params: {
+        zip: this.state.zip || 80211
+      }
+    }
+    axios.get('/api/getRandom', options)
+      .then( result => {
+        this.setState({
+          randomRec: result.data
+        }, () => console.log(this.state.recommendations))
       })
       .catch( err => console.log(err));
   }
@@ -65,8 +80,8 @@ class App extends React.Component {
   }
 
   handleRandomSubmit(event) {
-    // console.log(event.target.value);
-    // get a random restaurant from db
+    console.log('RANDO');
+    this.getRandom();
     event.preventDefault();
   }
 
@@ -96,6 +111,7 @@ class App extends React.Component {
           <div className="grid">
             <Button click={this.handleRandomSubmit} btnTitle={'Decide For Me!'} />
           </div>
+          <Recommendations secTitle={'Recommendation'} recs={this.state.randomRec}/>
         </section>
         <section className="footer">
           <a href="https://github.com/jimwalter/ghrden08-mvp">

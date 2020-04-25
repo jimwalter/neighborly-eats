@@ -99,7 +99,8 @@ Grid
   width: 33.33%;
   padding: 10px;
   margin-left: auto;
-  margin-right: auto;
+	margin-right: auto;
+	font-size: 20px;
 }
 
 
@@ -183,12 +184,13 @@ h1 {
 }
 
 h2 {
-	font-size: 24px;
+	font-size: 28px;
 	line-height: 44px;
 }
 
 h3 {
-	font-size: 21px;
+	font-size: 24px;
+	font-weight: 300;
 }
 
 
@@ -305,12 +307,13 @@ Home
 .hero {
 	color: #fff;
 	line-height: 44px;
-	padding: 22px 80px 66px 80px;
+	padding: 22px 80px 44px 80px;
 	text-align: center;
 }
 
 .hero h2 {
-	font-size: 36px;
+	font-size: 40px;
+	font-weight: 350;
 }
 
 .hero p {
@@ -455,7 +458,7 @@ Register
 }
 
 form {
-	margin-bottom: 22px;
+	margin-bottom: 10px;
 }
 
 input,
@@ -575,8 +578,8 @@ table h4 {
   height: 250px;
   width: 187.5px;
   margin-left: auto;
-  margin-right: auto;
-  border-radius: 50% !important;
+	margin-right: auto;
+	border-radius: 50% !important;
 }
 
 select {
@@ -585,10 +588,18 @@ select {
 
 .rightside {
   text-align: center;
-  padding: 40px 0px 0px 120px;
+  padding: 0px 0px 0px 120px;
 }
 
 .footer {
   text-align: center;
   margin: 50px 60.5px;
+}
+
+.info-text {
+	font-size: 20px;
+}
+
+.p-padding {
+	padding-top: 10px;
 }

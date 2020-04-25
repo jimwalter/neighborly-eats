@@ -19,7 +19,7 @@ const Form = (props) => {
       </form>
       <section className="col-2-3 rightside">
         <h2>Support Your Neighborhood Restaurants, Eat Local</h2><br/>
-        <p>For neighborhoods feeling the effects of COVID-19, it's never been more important to eat local.
+        <p className="info-text">For neighborhood restaurants feeling the effects of COVID-19, it's never been more important to eat local.
           You enter your neighborhood and the type of food you're in the mood for, we'll make the recommendations!</p>
       </section>
     </div>
