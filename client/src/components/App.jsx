@@ -104,7 +104,7 @@ class App extends React.Component {
         <section className="row">
           <Recommendations recs={this.state.recommendations}/>
         </section>
-        <SectionBreak title={'Not Sure? Enter Zip Above & Press Button'} />
+        <SectionBreak title={'Try Something New - Enter Zip Above & Press Button'} />
         <section className="row-alt-2">
           <h2 className="grid">Pick Random Restaurant:</h2>
           <br />
@@ -116,6 +116,8 @@ class App extends React.Component {
         <section className="footer">
           <a href="https://github.com/jimwalter/ghrden08-mvp">
             <h1>Project Repository</h1>
+            <p>Please note that failure to enter a zip code will result in recommendations in Denver, CO</p>
+            <p>Neighborly Eats is a project built by Jim Walter, built using React, Node, and Yelp Fusion</p>
           </a>
         </section>
       </div>

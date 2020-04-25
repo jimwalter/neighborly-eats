@@ -9,6 +9,7 @@ const Restaurant = (props) => {
       <img src={`${props.info.image_url}`} alt="Yelp Image"/>
       <p>Phone: {props.info.display_phone || 'N/A'}</p>
       <p className="p-padding">Rating: {props.info.rating || 'N/A'}</p>
+      <p className="p-padding">Price: {props.info.price || 'N/A'}</p>
       <br/>
       <form>
       <a href="#" onClick={(e) =>{
