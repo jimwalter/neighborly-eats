@@ -91,6 +91,7 @@ class App extends React.Component {
             <Recommendations recs={this.state.recommendations}/>
           </div>
         </section>
+        <br /><br/>
         <SectionBreak title={'Girlfriend Can\'t Decide?'} />
         <section className="row">
           <h2 className="grid">Pick Random Restaurant:</h2>
