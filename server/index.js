@@ -12,9 +12,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')))
 
 
 app.get('/api/getRecommendations', (req, res) => {
-  console.log(req.query.category);
   let cat = req.query.category.toLowerCase().replace(/['"]+/g, '');
-  console.log(cat);
   yelp.search(req.query.zip, cat)
     .then(response => {
       var respo = response.jsonBody.businesses;

@@ -1,8 +1,8 @@
+import axios from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Form from './Form.jsx';
-import axios from 'axios';
 import Button from './Button.jsx';
 import SectionBreak from './SectionBreak.jsx';
 import Recommendations from './Recommendations.jsx';
@@ -54,33 +54,29 @@ class App extends React.Component {
       .then( result => {
         this.setState({
           randomRec: result.data
-        }, () => console.log(this.state.randomRec))
+        })
       })
       .catch( err => console.log(err));
   }
 
   handleZipChange(event) {
-    // console.log(event.target.value);
     this.setState({
       zip: event.target.value
     });
   }
 
   handleCategorySelect(event) {
-    // console.log(event.target.value);
     this.setState({
       category: event.target.value
     })
   }
 
   handleRecommendationSubmit(event) {
-    // console.log(event.target.value);
     this.getRecommendations();
     event.preventDefault();
   }
 
   handleRandomSubmit(event) {
-    console.log('RANDO');
     this.getRandom();
     event.preventDefault();
   }
