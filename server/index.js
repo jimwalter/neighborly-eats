@@ -16,7 +16,6 @@ app.get('/api/getRecommendations', (req, res) => {
   yelp.search(req.query.zip, cat)
     .then(response => {
       var respo = response.jsonBody.businesses;
-      // console.log(respo);
       res.status(200).send(respo)
     })
     .catch(e => {
@@ -34,7 +33,6 @@ app.get('/api/getRandom', (req, res) => {
   yelp.searchOne(req.query.zip, randCat)
     .then(response => {
       var respo = response.jsonBody.businesses;
-      console.log(respo);
       res.status(200).send(respo)
     })
     .catch(e => {

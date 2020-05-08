@@ -39,7 +39,7 @@ class App extends React.Component {
       .then( result => {
         this.setState({
           recommendations: result.data
-        }, () => console.log(this.state.recommendations))
+        })
       })
       .catch( err => console.log(err));
   }
