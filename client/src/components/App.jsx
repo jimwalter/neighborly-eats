@@ -107,7 +107,7 @@ class App extends React.Component {
           <div className="grid">
             <Button click={this.handleRandomSubmit} btnTitle={'Decide For Me!'} />
           </div>
-          <Recommendations secTitle={'Recommendation'} recs={this.state.randomRec} class={'center-rec'}/>
+          <Recommendations recs={this.state.randomRec} class={'center-rec'}/>
         </section>
         <section className="footer">
           <a href="https://github.com/jimwalter/neighborly-eats" target="_blank">

@@ -10,7 +10,6 @@ const yelp = require('../db/seeds/generation.js');
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../client/dist')))
 
-
 app.get('/api/getRecommendations', (req, res) => {
   let cat = req.query.category.toLowerCase().replace(/['"]+/g, '');
   yelp.search(req.query.zip, cat)
