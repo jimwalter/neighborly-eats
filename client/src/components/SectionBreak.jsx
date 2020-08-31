@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const SectionBreak = (props) => {
-  return(
-    <section className="row-alt">
-      <div className="lead container">
-        <h1>{props.title}</h1>
+  return (
+    <section className="section-break">
+      <div>
+        <h2>{props.title}</h2>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default SectionBreak;
