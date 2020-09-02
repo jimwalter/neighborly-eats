@@ -17,7 +17,7 @@ const Form = (props) => {
         <br />
         <label>What Are You In The Mood For:</label>
         <select onChange={props.catSelect} name="category">
-          <option value="">Please Choose An Option</option>
+          <option value=""> Please Choose An Option </option>
           {props.categories.map((category) => (
             <option key={category.num} value={`"${category.name}"`}>
               {category.name}

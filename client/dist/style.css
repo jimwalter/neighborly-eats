@@ -20,6 +20,12 @@ Typography
 ======================================================
 */
 
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 200;
+}
 /*
 ======================================================
 Buttons
@@ -32,10 +38,10 @@ Buttons
   color: var(--primary);
   cursor: pointer;
   display: inline-block;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.5px;
-  margin: 0;
   text-transform: uppercase;
+  margin: 10px auto 40px;
 }
 
 .btn-alt {
@@ -114,7 +120,7 @@ Form
 }
 
 .form * {
-  font-size: 2.5em;
+  font-size: 2.75em;
   width: 100%;
   margin: 15px auto;
 }
@@ -125,11 +131,9 @@ Form
   width: 70%;
   border: 1px solid var(--text);
   border-radius: 10px;
+  background-color: var(--primary);
 }
 
-.form select {
-  padding: auto;
-}
 /*
 ======================================================
 Section Break
