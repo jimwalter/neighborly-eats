@@ -114,12 +114,15 @@ class App extends React.Component {
   }
 
   handleZipChange(event) {
+    console.log(event.target.value);
     this.setState({
       zip: event.target.value,
     });
   }
 
   handleCategorySelect(event) {
+    console.log(event.target.value);
+
     this.setState({
       category: event.target.value,
     });

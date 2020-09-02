@@ -1,13 +1,8 @@
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
   text-align: center;
   overflow-x: hidden;
-  text-decoration: none;
   color: var(--text);
+  box-sizing: border-box;
 }
 
 :root {
@@ -25,39 +20,6 @@ Typography
 ======================================================
 */
 
-h1,
-h2,
-h3,
-h4 {
-  color: var(--primary);
-}
-
-h1 {
-  font-size: 36px;
-  line-height: 44px;
-}
-
-h2 {
-  font-size: 28px;
-  line-height: 44px;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 300;
-}
-
-h4 {
-  font-size: 18px;
-}
-
-h5 {
-  color: var(--hover);
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
 /*
 ======================================================
 Buttons
@@ -65,7 +27,8 @@ Buttons
 */
 
 .btn {
-  border-radius: 5px;
+  font-size: 2.5em;
+  border-radius: 10px;
   color: var(--primary);
   cursor: pointer;
   display: inline-block;
@@ -78,7 +41,7 @@ Buttons
 .btn-alt {
   background: var(--secondary);
   color: var(--primary);
-  border: 2px solid var(--greenText);
+  border: 2px solid var(--secondary);
   padding: 11px 30px;
 }
 
@@ -87,31 +50,91 @@ Buttons
   color: var(--greenText);
 }
 
+/*
+======================================================
+Body
+======================================================
+*/
+
 body {
   background: var(--primary);
   color: var(--text);
-  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100vw;
+  text-decoration: none;
+  margin: 0;
 }
+
+/*
+======================================================
+Header
+======================================================
+*/
 
 header {
   background: var(--secondary);
-  color: var(--green);
   width: 100%;
   margin: auto;
 }
 
 .header {
-  height: auto;
+  margin: 50px auto;
+  max-width: 80%;
+}
+
+.header h1,
+.header h3 {
+  color: var(--green);
+}
+
+.header h1 {
   margin: 50px auto;
 }
 
-.form-row,
-.recs {
-  display: block;
-  width: 100vw;
-  background: var(--primary);
+.header h3 {
+  margin: 50px auto;
 }
+
+/*
+======================================================
+Form
+======================================================
+*/
+
+.form-section {
+  max-width: 90%;
+  margin: 40px auto;
+}
+
+.form {
+  max-width: 90%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form * {
+  font-size: 2.5em;
+  width: 100%;
+  margin: 15px auto;
+}
+
+.form select,
+.form input {
+  height: 2em;
+  width: 70%;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+}
+
+.form select {
+  padding: auto;
+}
+/*
+======================================================
+Section Break
+======================================================
+*/
 
 .section-break {
   color: var(--text);
@@ -126,15 +149,27 @@ header {
   color: var(--text);
 }
 
+/*
+======================================================
+Recommendation Sections
+======================================================
+*/
+
 .recommendations {
   min-height: 15vh;
 }
+
+/*
+======================================================
+Footer Section
+======================================================
+*/
 
 footer {
   background: var(--secondary);
   width: 100%;
 }
 
-footer p {
+footer * {
   color: var(--primary);
 }
