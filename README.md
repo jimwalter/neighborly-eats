@@ -24,7 +24,10 @@
 * Back End:             Express/Node.js
 * Restaurant Database:  Yelp Fusion API
 
+### Environment Variables
+* This app requires a Yelp Fusion API key. Copy `.env.example` to `.env` and set `YELP_KEY` to your key (obtain one at https://www.yelp.com/developers/v3/manage_app). `.env` is git-ignored.
+* **Security note:** a Yelp API key was previously committed to source control (`seed.js`). It has been removed from the source, but it still exists in the git history and must be rotated/revoked in the Yelp developer dashboard.
+
 ### Known Bugs
 * Responsive CSS
 * Location Accuracy
-* Category dropdown list not finding recommendations
